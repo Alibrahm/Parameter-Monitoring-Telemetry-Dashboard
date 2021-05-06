@@ -1,0 +1,139 @@
+Telemetry Viewer File Format v0.6
+
+GUI Settings:
+
+	tile column count = 6
+	tile row count = 6
+	show plot tooltips = true
+	smooth scrolling = true
+	opengl antialiasing = true
+	show fps and period = false
+	chart index for benchmarks = -1
+
+Communication Settings:
+
+	port = UART: COM17
+	uart baud rate = 9600
+	tcp/udp port number = 8080
+	packet type = CSV
+	sample rate = 10
+
+3 Data Structure Locations:
+
+	location = 0
+	processor index = -1
+	name = HeartRate
+	color = 0xFF0000
+	unit = bpm
+	conversion factor a = 1.0
+	conversion factor b = 1.0
+
+	location = 1
+	processor index = -1
+	name = BloodOxygen
+	color = 0x0000FF
+	unit = Sp02
+	conversion factor a = 1.0
+	conversion factor b = 1.0
+
+	location = 2
+	processor index = -1
+	name = BodyTemp
+	color = 0x339900
+	unit = Celcius
+	conversion factor a = 1.0
+	conversion factor b = 1.0
+
+Checksum:
+
+	location = -1
+	checksum processor index = -1
+
+4 Charts:
+
+	chart type = Time Domain Chart (Cached)
+	top left x = 0
+	top left y = 0
+	bottom right x = 2
+	bottom right y = 2
+	datasets = 0,1,2
+	sample count = 1000
+	autoscale y-axis minimum = true
+	manual y-axis minimum = -1.0
+	autoscale y-axis maximum = true
+	manual y-axis maximum = 1.0
+	show x-axis title = true
+	show x-axis scale = true
+	show y-axis title = false
+	show y-axis scale = true
+	show legend = true
+
+	chart type = Histogram Chart
+	top left x = 3
+	top left y = 0
+	bottom right x = 5
+	bottom right y = 2
+	datasets = 0
+	sample count = 1000
+	bin count = 60
+	x-axis is centered = true
+	x-axis center value = 0.0
+	x-axis autoscale minimum = true
+	x-axis manual minimum = -1.0
+	x-axis autoscale maximum = true
+	x-axis manual maximum = 1.0
+	y-axis shows relative frequency = true
+	y-axis shows frequency = false
+	y-axis minimum is zero = true
+	y-axis autoscale maximum = true
+	y-axis manual minimum = 0.0
+	y-axis manual maximum = 1.0
+	show x-axis title = true
+	show x-axis scale = true
+	show y-axis title = true
+	show y-axis scale = true
+	show legend = true
+
+	chart type = Histogram Chart
+	top left x = 0
+	top left y = 3
+	bottom right x = 1
+	bottom right y = 5
+	datasets = 1
+	sample count = 1000
+	bin count = 60
+	x-axis is centered = true
+	x-axis center value = 0.0
+	x-axis autoscale minimum = true
+	x-axis manual minimum = -1.0
+	x-axis autoscale maximum = true
+	x-axis manual maximum = 1.0
+	y-axis shows relative frequency = true
+	y-axis shows frequency = false
+	y-axis minimum is zero = true
+	y-axis autoscale maximum = true
+	y-axis manual minimum = 0.0
+	y-axis manual maximum = 1.0
+	show x-axis title = true
+	show x-axis scale = true
+	show y-axis title = true
+	show y-axis scale = true
+	show legend = true
+
+	chart type = Time Domain Chart
+	top left x = 2
+	top left y = 3
+	bottom right x = 5
+	bottom right y = 5
+	datasets = 0,1,2
+	duration type = Samples
+	duration = 10000
+	autoscale y-axis minimum = true
+	manual y-axis minimum = -1.0
+	autoscale y-axis maximum = true
+	manual y-axis maximum = 1.0
+	show x-axis title = true
+	show x-axis scale = true
+	show y-axis title = false
+	show y-axis scale = true
+	show legend = true
