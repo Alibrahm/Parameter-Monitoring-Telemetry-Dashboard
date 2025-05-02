@@ -1,5 +1,6 @@
 Telemetry Viewer File Format v0.6
 
+
 GUI Settings:
 
 	tile column count = 6
